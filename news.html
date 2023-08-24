@@ -1,0 +1,230 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>News Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+    
+    h1 {
+      color: #333;
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+    
+    h2 {
+      color: #333;
+      font-size: 24px;
+      margin: 0 0 10px;
+    }
+    
+    p {
+      color: #777;
+      font-size: 16px;
+      margin: 0;
+    }
+    
+    a {
+      color: #00f;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    .article {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .author {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #555;
+    }
+    
+    .description {
+      display: none;
+      margin-top: 10px;
+    }
+    
+    .show-description {
+      cursor: pointer;
+      color: #3498db;
+    }
+  </style>
+</head>
+<body>
+  <h1><span style="font-weight: bold; color: #e74c3c;">Top Stories</span> in the <span style="font-weight: normal; color: #3498db;">US Today</span></h1>
+  
+  {{#each articles}}
+  <div class="article">
+    <h2>{{title}}</h2>
+    <p class="author">{{author}}</p>
+    <p class="description">{{description}}</p>
+    <a href="{{url}}">Read</a>
+  </div>
+  {{/each}}
+
+  <script>
+    // Add event listener to each article for show/hide toggle
+    const articleDescriptions = document.querySelectorAll('.description');
+
+    articleDescriptions.forEach((description) => {
+      const showDescriptionButton = document.createElement('span');
+      showDescriptionButton.classList.add('show-description');
+      showDescriptionButton.textContent = 'Show Description';
+
+      const hideDescriptionButton = document.createElement('span');
+      hideDescriptionButton.classList.add('show-description');
+      hideDescriptionButton.textContent = 'Hide Description';
+      hideDescriptionButton.style.display = 'none';
+
+      const article = description.parentElement;
+      article.appendChild(showDescriptionButton);
+      article.appendChild(hideDescriptionButton);
+
+      showDescriptionButton.addEventListener('click', () => {
+        description.style.display = 'block';
+        showDescriptionButton.style.display = 'none';
+        hideDescriptionButton.style.display = 'inline';
+      });
+
+      hideDescriptionButton.addEventListener('click', () => {
+        description.style.display = 'none';
+        showDescriptionButton.style.display = 'inline';
+        hideDescriptionButton.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html> 
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>News Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+    
+    h1 {
+      color: #333;
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+    
+    h2 {
+      color: #333;
+      font-size: 24px;
+      margin: 0 0 10px;
+    }
+    
+    p {
+      color: #777;
+      font-size: 16px;
+      margin: 0;
+    }
+    
+    a {
+      color: #00f;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    .article {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .author {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #555;
+    }
+    
+    .description {
+      display: none;
+      margin-top: 10px;
+    }
+    
+    .show-description {
+      cursor: pointer;
+      color: #3498db;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><span style="font-weight: bold; color: #e74c3c;">Top Stories</span> in the <span style="font-weight: normal; color: #3498db;">US Today</span></h1>
+
+  {{#each articles}}
+  <div class="article">
+    <h2>{{title}}</h2>
+    <p class="author">{{author}}</p>
+    <p class="description">{{description}}</p>
+    <a href="{{url}}">Read</a>
+  </div>
+  {{/each}}
+
+  <script>
+    // Add event listener to each article for show/hide toggle
+    const articleDescriptions = document.querySelectorAll('.description');
+
+    articleDescriptions.forEach((description) => {
+      const showDescriptionButton = document.createElement('span');
+      showDescriptionButton.classList.add('show-description');
+      showDescriptionButton.textContent = 'Show Description';
+
+      const hideDescriptionButton = document.createElement('span');
+      hideDescriptionButton.classList.add('show-description');
+      hideDescriptionButton.textContent = 'Hide Description';
+      hideDescriptionButton.style.display = 'none';
+
+      const article = description.parentElement;
+      article.appendChild(showDescriptionButton);
+      article.appendChild(hideDescriptionButton);
+
+      showDescriptionButton.addEventListener('click', () => {
+        description.style.display = 'block';
+        showDescriptionButton.style.display = 'none';
+        hideDescriptionButton.style.display = 'inline';
+      });
+
+      hideDescriptionButton.addEventListener('click', () => {
+        description.style.display = 'none';
+        showDescriptionButton.style.display = 'inline';
+        hideDescriptionButton.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+
+</html>
